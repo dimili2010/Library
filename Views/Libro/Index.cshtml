@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Library.Models.Libro>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+   
+</head>
+<body>
+    <div >
+        <div>
+            <p ><B> Bienvenido a la libreria Travel</B></p>           
+        </div>
+        <div >
+            @foreach (var item in Model)
+            {
+            <div>
+                <div>
+                    <p>
+                        @Html.DisplayNameFor(model => item.Titulo) &nbsp;
+                        @Html.DisplayFor(model => item.Titulo)
+                    </p>
+                    <p>
+                        @Html.DisplayNameFor(model => item.Sinapsis) &nbsp;
+
+                        @Html.DisplayFor(model => item.Sinapsis)
+                    </p>
+                </div>
+                <div>
+                    <a asp-action="Details" asp-route-id="@item.LibroId">Details</a> |
+                </div>
+                <br />  <br />
+            </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

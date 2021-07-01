@@ -1,0 +1,63 @@
+﻿@model Library.Models.Libro
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>  
+</head>
+<body>
+    <div>
+        <div>
+            <div>
+                <p>
+                    @Html.DisplayNameFor(model => model.Titulo) &nbsp;
+
+                    @Html.DisplayFor(model => model.Titulo)
+                </p>
+            </div>
+            <div>
+                <p>
+                    @Html.DisplayNameFor(model => model.Sinapsis) &nbsp;
+
+                    @Html.DisplayFor(model => model.Sinapsis)
+                </p>
+            </div>
+            <div>
+                <p>
+                    @Html.DisplayNameFor(model => model.NumPaginas) &nbsp;
+
+                    @Html.DisplayFor(model => model.NumPaginas)
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    @Html.DisplayNameFor(model => model.Autor.Nombre) &nbsp;
+
+                    @Html.DisplayFor(model => model.Autor.Nombre)   &nbsp;  @Html.DisplayFor(model => model.Autor.Apellidos)
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    @Html.DisplayNameFor(model => model.Editorial.Nombre) &nbsp;
+
+                    @Html.DisplayFor(model => model.Editorial.Nombre)   &nbsp;
+
+                    @Html.DisplayNameFor(model => model.Editorial.Sede) &nbsp;
+
+                    @Html.DisplayFor(model => model.Editorial.Sede)
+                </p>
+            </div>
+            <div>
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
